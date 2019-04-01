@@ -60,11 +60,10 @@ const shoppingList = (function(){
     //store.items.push({ id: cuid(), name: itemName, checked: false });
     try{
       Item.validateName(itemName);
-      Item.create(itemName);
-      store.items(itemName);
+      store.items.push(Item.create(itemName));
       render();
     }catch(error){
-      console.log('cannotadd item:' + error.messge);
+      console.log('cannot add item:' + error.messge);
     }
   }
   

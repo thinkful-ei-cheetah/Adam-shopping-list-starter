@@ -9,7 +9,7 @@ const Item = (function(){
     function create(name){
         return {
             id: cuid(), 
-            'name': name, 
+            name, 
             checked: false
         };
     }
