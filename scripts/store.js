@@ -10,4 +10,10 @@ const store = (function () {
       ];
      const hideCheckedItems = false;
      const searchTerm = '';
+
+     return {
+         items,
+         hideCheckedItems,
+         searchTerm
+     };
 }());

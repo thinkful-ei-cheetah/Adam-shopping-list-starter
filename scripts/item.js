@@ -4,15 +4,17 @@ const Item = (function(){
     function validateName(name) {
         if (!name){
             throw new Error('name does not exist');
-            
         }
     }
     function create(name){
-        return {id: cuid(), name, checked: false};
+        return {
+            id: cuid(), 
+            'name': name, 
+            checked: false
+        };
     }
     return {
         validateName,
         create
     };
 }());
-
