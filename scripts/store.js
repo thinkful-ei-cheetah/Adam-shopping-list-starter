@@ -1,5 +1,5 @@
 'use strict';
-/* global shoppingList, cuid */
+/* global cuid */
 const store = (function () {
 
     const items = [
