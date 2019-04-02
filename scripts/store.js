@@ -12,7 +12,7 @@ const store = (function () {
      const searchTerm = '';
 
      function findById(id){
-         items.find(item => item.id === id);
+        return items.find(item => item.id === id);
      } 
      function addItem (name){
         try{
@@ -38,6 +38,13 @@ const store = (function () {
         const index = items.findIndex(item => item.id === id);
         this.items.splice(index, 1);
      }
+     function toggleCheckedFilter(){
+         this.hideCheckedItems = !this.hideCheckedItems;
+     }
+     function setSearchTerm(val){
+         this.searchTerm = val;
+     }
+
 
      return {
          items,
@@ -47,6 +54,8 @@ const store = (function () {
          addItem,
          findAndToggleChecked,
          findAndUpdateName,
-         findAndDelete
+         findAndDelete,
+         toggleCheckedFilter,
+         setSearchTerm
      };
 }());
